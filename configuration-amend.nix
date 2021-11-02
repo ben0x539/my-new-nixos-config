@@ -85,21 +85,6 @@
     pmount # todo setuid
 
     git
-
-    # TODO: move the below out of system config
-
-    _1password
-    _1password-gui
-
-    ripgrep
-    rustup
-
-    obconf
-    xcompmgr
-    ruby
-    mosh
-
-    wmctrl # for xvim
   ];
 
   programs.vim.defaultEditor = true;
