@@ -14,6 +14,7 @@
 
     obconf
     xcompmgr
+    xtrlock-pam
 
     _1password
     _1password-gui
@@ -30,6 +31,10 @@
     ruby
     python2
     python3
+
+    chatterino2
+
+    signal-desktop
 
     wmctrl # for xvim
   ];
@@ -256,6 +261,7 @@
 
   programs.urxvt = {
     enable = true;
+    package = pkgs.rxvt_unicode-with-plugins;
     keybindings = {
       "Shift-Control-C" = "eval:selection_to_clipboard";
       "Shift-Control-V" = "eval:paste_clipboard";
