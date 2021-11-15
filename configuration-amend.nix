@@ -157,6 +157,13 @@
       HandlePowerKey=suspend
     '';
   };
+
+  boot.kernelParams = [ "mem_sleep_default=deep" ];
+  # i basically never use blutooth stuff but it uses hella battery
+  boot.blacklistedKernelModules = [ "bluetooth" "btusb" ];
+
+  # 3.5mm audio jack trrs microphone thing
+  boot.extraModprobeConfig = "options snd-hda-intel model=dell-headset-multi";
   # TODO figure out the suspend situation
   # we wake up super fast so it's probably not the good suspend
   # but also hibernate is not really an option
