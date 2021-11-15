@@ -138,6 +138,7 @@
       vim-go
       typescript-vim
       vim-nix
+      haskell-vim
     ];
     extraConfig = builtins.readFile ./home/vimrc;
   };
