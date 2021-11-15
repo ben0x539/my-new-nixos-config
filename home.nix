@@ -8,13 +8,18 @@
 
     mosh
     rustup
+    crate2nix
 
     btop
+    powertop
     neofetch
+
+    pavucontrol
 
     obconf
     xcompmgr
     xtrlock-pam
+    xsel
 
     _1password
     _1password-gui
@@ -31,6 +36,10 @@
     ruby
     python2
     python3
+
+    cabal2nix
+    cabal-install
+    nix-prefetch-git
 
     chatterino2
 
