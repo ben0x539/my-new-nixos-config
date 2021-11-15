@@ -1,0 +1,125 @@
+syntax on
+set bs=2                " Allow backspacing over everything in insert mode
+set ruler               " Show the cursor position all the time
+set viminfo='20,\"500   " Keep a .viminfo file.
+set suffixes+=.info,.aux,.log,.dvi,.bbl,.out,.o,.lo " lower tab completion prio
+set numberwidth=3
+set nomodeline
+set laststatus=1
+
+map Q gq " Don't use Ex mode, use Q for formatting
+
+set tabstop=2 shiftwidth=2 softtabstop=2 smarttab noexpandtab " expandtab
+
+"autocmd FileType changelog setlocal noet ts=8 sw=8 sts=8
+autocmd BufNewFile,BufRead SCons*     setf scons
+"autocmd FileType go setlocal ts=4 sw=4 sts=4 noet textwidth=72
+"autocmd FileType gitcommit set nosmartindent
+autocmd FileType sh let is_bash = 1 | set syn=sh
+
+let g:rust_recommended_style = 0
+
+let g:terraform_fmt_on_save=1
+
+set autoindent
+"set smartindent
+
+filetype plugin indent on
+
+" from vimrc_example.vim
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+autocmd BufReadPost *
+	\ if line("'\"") >= 1 && line("'\"") <= line("$") |
+	\   exe "normal! g`\"" |
+	\ endif
+
+filetype off
+filetype on
+
+set undofile                " Save undo's after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
+set backupdir=~/.vim-tmp,.,~/tmp,~/.local/tmp
+set directory=~/.vim-tmp,.,~/tmp,~/.local/tmp
+
+set history=1000
+
+set textwidth=78
+
+set t_Co=8
+set bg=light
+set showcmd
+set hlsearch
+set title
+set scrolloff=4
+
+" smart comment editing
+set formatoptions+=jcroqn
+
+nnoremap <C-Right> e
+nnoremap <C-Left> b
+inoremap <C-Right> <ESC>lei
+inoremap <C-Left> <ESC>bi
+map <Up> gk
+map <Down> gj
+
+" display trailing whitespace as blue underlines
+autocmd WinEnter,VimEnter *
+\ highlight TrailingWhitespace cterm=underline gui=underline guifg=darkblue ctermfg=darkblue |
+\ let w:matchTrailing=matchadd('TrailingWhitespace', '\s\+$', -1) |
+\ highlight Tab cterm=underline gui=underline guifg=darkgray ctermfg=darkgray |
+\ let w:matchTab=matchadd('Tab', '\t', -1)
+
+set nojoinspaces " no double spaces after periods
+set clipboard-=autoselect " don't clobber * with any visual mode selection
+
+" vim-go stuff mostly
+
+let g:go_fmt_command = "goimports"
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+	let l:file = expand('%')
+	if l:file =~# '^\f\+_test\.go$'
+		call go#test#Test(0, 1)
+	elseif l:file =~# '^\f\+\.go$'
+		call go#cmd#Build(0)
+	endif
+
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+" run :GoRun or :GoTest based on the go file
+function! s:run_go_files()
+	let l:file = expand('%')
+	if l:file =~# '^\f\+_test\.go$'
+		call go#test#Test(0, 0)
+	elseif l:file =~# '^\f\+\.go$'
+		call go#cmd#Run(0)
+	endif
+endfunction
+
+autocmd FileType go nmap <leader>r :<C-u>call <SID>run_go_files()<CR>
+
+"let g:go_highlight_types = 1
+"let g:go_highlight_extra_types = 1
+"let g:go_highlight_fields = 1
+"let g:go_highlight_functions = 1
+"let g:go_highlight_function_calls = 1
+"let g:go_highlight_operators = 1
+
+"let g:go_auto_type_info = 1
+"let g:go_auto_sameids = 1
+"set updatetime=50
+
+" dont pop up rust docs or whatever
+set completeopt-=preview
