@@ -5,10 +5,7 @@
 
   home.packages = with pkgs; [
     screen
-
     mosh
-    rustup
-    crate2nix
 
     btop
     powertop
@@ -20,6 +17,7 @@
     xcompmgr
     xtrlock-pam
     xsel
+    feh
 
     _1password
     _1password-gui
@@ -33,6 +31,12 @@
     gnome.eog
     gnome.cheese
 
+    gcc
+
+    rustup
+    crate2nix
+
+
     ruby
     python2
     python3
@@ -42,8 +46,11 @@
     nix-prefetch-git
 
     chatterino2
-
     signal-desktop
+    discord
+
+    maim
+    xclip
 
     wmctrl # for xvim
   ];
