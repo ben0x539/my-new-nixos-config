@@ -14,6 +14,7 @@ set tabstop=2 shiftwidth=2 softtabstop=2 smarttab expandtab " noexpandtab " expa
 "autocmd FileType changelog setlocal noet ts=8 sw=8 sts=8
 autocmd BufNewFile,BufRead SCons*     setf scons
 autocmd FileType go setlocal ts=4 sw=4 sts=4 noet textwidth=72
+autocmd FileType rust setlocal ts=4 sw=4 sts=4 et textwidth=72
 autocmd FileType haskell setlocal ts=2 sw=2 sts=2 et textwidth=72
 "autocmd FileType gitcommit set nosmartindent
 autocmd FileType sh let is_bash = 1 | set syn=sh
