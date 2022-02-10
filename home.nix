@@ -4,6 +4,8 @@
   };
 
   home.packages = with pkgs; [
+    nixos-option
+
     screen
     mosh
 
@@ -36,7 +38,6 @@
     rustup
     crate2nix
 
-
     ruby
     python2
     python3
@@ -52,10 +53,22 @@
     maim
     xclip
 
+    unzip
+    zip
+    unrar
+    rar
+    atool
+
+    nodejs
+    yarn
+
+    manpages
+
     wmctrl # for xvim
   ];
 
   programs.firefox.enable = true;
+  programs.chromium.enable = true;
   programs.gh.enable = true;
   programs.go.enable = true;
   programs.irssi.enable = true;
