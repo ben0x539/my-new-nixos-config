@@ -9,6 +9,7 @@
   time.timeZone = "America/Los_Angeles";
 
   networking.networkmanager.enable = true;
+  networking.dhcpcd.enable = false; # since my 2022-01-05 build, dhcpcd breaks networkmanager's dhcp stuff? https://github.com/NixOS/nixpkgs/issues/126498
   networking.hostId = "2e94b734";
   programs.nm-applet.enable = true;
 
