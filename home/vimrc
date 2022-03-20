@@ -60,7 +60,12 @@ set title
 set scrolloff=4
 
 " smart comment editing
-set formatoptions+=jcroqn
+set formatoptions+=jroqn
+
+" actually this is broken and tries to break shell commands if they have urls in them
+set formatoptions-=t
+set formatoptions-=a
+set formatoptions-=c
 
 nnoremap <C-Right> e
 nnoremap <C-Left> b
