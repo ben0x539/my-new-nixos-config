@@ -91,8 +91,8 @@
   programs.vim.defaultEditor = true;
 
   nix = {
-    useSandbox = true;
-    maxJobs = 4;
+    settings.sandbox = true;
+    settings.max-jobs = 4;
   };
   nixpkgs.config.allowUnfree = true;
 
