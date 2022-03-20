@@ -34,6 +34,7 @@
     gnome.cheese
 
     gcc
+    clang
 
     rustup
     crate2nix
@@ -55,14 +56,13 @@
 
     unzip
     zip
-    unrar
     rar
     atool
 
     nodejs
     yarn
 
-    manpages
+    man-pages
 
     wmctrl # for xvim
   ];
