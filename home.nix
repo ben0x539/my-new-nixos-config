@@ -34,7 +34,6 @@
     gnome.cheese
 
     gcc
-    clang
 
     rustup
     crate2nix
