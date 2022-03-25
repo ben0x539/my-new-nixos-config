@@ -37,6 +37,7 @@
 
     rustup
     crate2nix
+    cargo-edit
 
     ruby
     python2
