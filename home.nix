@@ -29,6 +29,8 @@
     inkscape
     gimp
 
+    audacious
+
     evince
     gnome.eog
     gnome.cheese
@@ -46,6 +48,7 @@
     cabal2nix
     cabal-install
     nix-prefetch-git
+    gitg
 
     chatterino2
     signal-desktop
@@ -155,7 +158,7 @@
       # override to not get vim-sensible.
       tabnine-vim # TODO conditional on which system maybe
       rust-vim
-      vim-go
+      # vim-go broke i guess
       typescript-vim
       vim-nix
       haskell-vim
