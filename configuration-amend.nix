@@ -28,7 +28,7 @@
     autoRepeatDelay = 150;
     autoRepeatInterval = 25;
 
-    xkbOptions = "eurosign:e";
+    xkbOptions = "eurosign:e, caps:swapescape";
 
     # dpi = 72; ?
   };
