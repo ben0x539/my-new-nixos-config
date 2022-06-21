@@ -68,6 +68,8 @@
     man-pages
 
     wmctrl # for xvim
+
+    blender
   ];
 
   programs.firefox.enable = true;
