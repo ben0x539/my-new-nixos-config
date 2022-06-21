@@ -6,6 +6,8 @@
     ./hardware-configuration-amend.nix
   ];
 
+  networking.hostName = "vie";
+
   time.timeZone = "America/Los_Angeles";
 
   networking.networkmanager.enable = true;
