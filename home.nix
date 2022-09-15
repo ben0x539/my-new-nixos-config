@@ -3,6 +3,8 @@
     allowUnfree = true;
   };
 
+  home.stateVersion = "18.09";
+
   home.packages = with pkgs; [
     nixos-option
 
