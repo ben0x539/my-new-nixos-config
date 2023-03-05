@@ -109,6 +109,7 @@
     };
   };
 
+  services.thermald.enable = true;
   powerManagement.powertop.enable = true;
   programs.ssh.startAgent = true;
   programs.light.enable = true; # used in openbox rc.xml
