@@ -72,6 +72,10 @@
     wmctrl # for xvim
 
     blender
+
+    (retroarch.override {
+      cores =  [ libretro.snes9x ];
+    })
   ];
 
   programs.firefox.enable = true;
@@ -160,9 +164,9 @@
     enable = true;
     plugins = with pkgs.vimPlugins; lib.mkOverride 99 [
       # override to not get vim-sensible.
-      tabnine-vim # TODO conditional on which system maybe
+      #tabnine-vim # broken/YouCompleteMe # TODO conditional on which system maybe
       rust-vim
-      # vim-go broke i guess
+      vim-go
       typescript-vim
       vim-nix
       haskell-vim
