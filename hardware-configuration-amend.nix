@@ -28,10 +28,6 @@
   # default is 100, so this is the nicest possible override.
   swapDevices = lib.mkOverride 99 [ { device = "//dev/zvol/zfw/swap"; } ];
 
-  # I'm not sure if I want this, but I don't want my resolution
-  # to be scaled and everything. I like the small pixels.
-  hardware.video.hidpi.enable = false;
-
   # probably need these to boot.
   systemd.services.zfs-mount.requiredBy = [ "local-fs.target" ];
   boot.supportedFilesystems = [ "zfs" ];
