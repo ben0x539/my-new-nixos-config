@@ -71,7 +71,11 @@
 
     wmctrl # for xvim
 
-    blender
+    logseq
+
+    scrypt
+
+    texlive.combined.scheme-full
 
     (retroarch.override {
       cores =  [ libretro.snes9x ];
