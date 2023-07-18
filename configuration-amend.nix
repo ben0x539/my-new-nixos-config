@@ -174,5 +174,11 @@
 
   # idk
   # blueman.enable = true;
+
+  # idk how to get rid of this
+  # i think it's via xtrlock
+  nixpkgs.config.permittedInsecurePackages = [
+    "python-2.7.18.6"
+  ];
 }
 

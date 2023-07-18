@@ -44,7 +44,7 @@
     cargo-edit
 
     ruby
-    python2
+    #python2
     python3
 
     cabal2nix
