@@ -186,5 +186,7 @@
 
     firefox.speechSynthesisSupport = true;
   };
+
+  networking.firewall.enable = false;
 }
 

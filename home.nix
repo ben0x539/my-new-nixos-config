@@ -1,5 +1,5 @@
 { pkgs, lib, ... }: {
-  home.stateVersion = "18.09";
+  home.stateVersion = "23.05";
 
   home.packages = with pkgs; [
     nixos-option
