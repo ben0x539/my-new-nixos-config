@@ -117,6 +117,8 @@
   # mostly copied without thinking too hard
   programs.adb.enable = true; # this has a daemon i guess # 'android_sdk.accept_license = true;'
 
+  programs.dconf.enable = true;
+
   virtualisation = {
     docker = {
       enable = true;
