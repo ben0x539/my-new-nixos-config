@@ -264,6 +264,7 @@
       "keysym.C-Left" = "\\033[1;5D";
       "keysym.C-Right" = "\\033[1;5C";
       searchable-scrollback = "M-S-s";
+      visualBell = true;
     };
   };
 
