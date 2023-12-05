@@ -23,6 +23,8 @@
     xsel
     feh
 
+    firefox
+
     _1password
     _1password-gui
 
@@ -82,7 +84,6 @@
     })
   ];
 
-  programs.firefox.enable = true;
   programs.chromium.enable = true;
   programs.gh.enable = true;
   programs.go.enable = true;

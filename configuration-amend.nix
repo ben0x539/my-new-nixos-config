@@ -74,7 +74,6 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    firefox
     tint2 # to see the nm-applet
     rxvt-unicode
 
