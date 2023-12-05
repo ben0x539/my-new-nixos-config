@@ -78,6 +78,12 @@
     (retroarch.override {
       cores =  [ libretro.snes9x ];
     })
+
+    prismlauncher
+
+    youtube-dl
+
+    ffmpeg
   ];
 
   programs.chromium.enable = true;
@@ -263,6 +269,16 @@
       searchable-scrollback = "M-S-s";
       visualBell = true;
     };
+  };
+
+  programs.vscode ={
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      vscodevim.vim
+      matklad.rust-analyzer
+      ms-python.python
+      golang.go
+    ];
   };
 
   # unported xresources
