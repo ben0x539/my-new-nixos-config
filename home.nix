@@ -1,8 +1,4 @@
 { pkgs, lib, ... }: {
-  nixpkgs.config = { # TODO is this good
-    allowUnfree = true;
-  };
-
   home.stateVersion = "18.09";
 
   home.packages = with pkgs; [
