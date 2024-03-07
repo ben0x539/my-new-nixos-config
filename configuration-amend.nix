@@ -148,7 +148,7 @@
   };
   services.avahi = {
     enable = true;
-    nssmdns = true;
+    nssmdns4 = true;
   };
 
   security.wrappers = {
@@ -194,6 +194,7 @@
 
     permittedInsecurePackages = [
       "python-2.7.18.7"
+      "electron-25.9.0" # ???
     ];
 
     firefox.speechSynthesisSupport = true;
