@@ -36,6 +36,18 @@
   };
   #fonts.fontconfig.dpi = 96; ?
 
+  fonts.packages = with pkgs; [
+    corefonts
+    terminus_font
+    dejavu_fonts
+    vistafonts
+    fira-code
+    inconsolata
+    source-code-pro
+    xorg.fontxfree86type1
+    #google-fonts
+  ];
+
   sound.enable = true;
 
   services.xserver.libinput = {
