@@ -195,6 +195,9 @@
       typescript-vim
       vim-nix
       haskell-vim
+
+      #coc-nvim
+      #coc-rust-analyzer
     ];
     extraConfig = builtins.readFile ./home/vimrc;
   };

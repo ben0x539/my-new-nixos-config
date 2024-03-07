@@ -130,3 +130,6 @@ autocmd FileType go nmap <leader>r :<C-u>call <SID>run_go_files()<CR>
 
 " dont pop up rust docs or whatever
 set completeopt-=preview
+
+highlight CocFloating ctermbg=black
+highlight CocMenuSel ctermbg=darkgrey cterm=underline
