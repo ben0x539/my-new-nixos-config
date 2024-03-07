@@ -36,6 +36,9 @@
     gnome.cheese
 
     gcc
+    gdb
+
+    ghc
 
     rustup
     crate2nix
@@ -83,17 +86,32 @@
 
     youtube-dl
 
-    ffmpeg
+    ffmpeg-full # need full for x11grab
+
+    gopls
+
+    xorg.xwininfo
+
+    calibre
+
+    graphviz
   ];
 
   programs.chromium.enable = true;
-  programs.gh.enable = true;
   programs.go.enable = true;
   programs.irssi.enable = true;
   programs.jq.enable = true;
   programs.man.enable = true;
   programs.mpv.enable = true;
   programs.obs-studio.enable = true;
+  programs.alacritty.enable = true;
+
+  programs.gh = {
+    enable = true;
+    settings = {
+      version = 1;
+    };
+  };
 
   programs.readline = {
     enable = true;
