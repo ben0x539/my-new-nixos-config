@@ -137,7 +137,6 @@
     libvirtd.enable = true;
   };
 
-  nix.package = pkgs.nixUnstable;
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
@@ -193,7 +192,7 @@
     allowUnfree = true;
 
     permittedInsecurePackages = [
-      "python-2.7.18.7"
+      "python-2.7.18.8"
       "electron-25.9.0" # ???
     ];
 
