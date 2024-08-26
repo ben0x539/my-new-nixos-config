@@ -42,8 +42,10 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  hardware.opengl.enable = true;
-  hardware.opengl.driSupport32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   # Configure keymap in X11
   # services.xserver.layout = "us";

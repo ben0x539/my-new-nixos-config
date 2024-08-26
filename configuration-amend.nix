@@ -19,10 +19,6 @@
 
   services.xserver = {
     enable = true;
-    # Enable the GNOME Desktop Environment.
-    #services.xserver.displayManager.gdm.enable = true;
-    #services.xserver.desktopManager.gnome.enable = true;
-    displayManager.defaultSession = "none+openbox";
     windowManager = {
       openbox.enable = true;
     };
@@ -30,9 +26,15 @@
     autoRepeatDelay = 150;
     autoRepeatInterval = 25;
 
-    xkbOptions = "eurosign:e, caps:swapescape";
-
     # dpi = 72; ?
+
+    xkb.options = "eurosign:e, caps:swapescape";
+  };
+  # Enable the GNOME Desktop Environment.
+  #services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.desktopManager.gnome.enable = true;
+  services.displayManager = {
+    defaultSession = "none+openbox";
   };
   #fonts.fontconfig.dpi = 96; ?
 
@@ -48,9 +50,7 @@
     #google-fonts
   ];
 
-  sound.enable = true;
-
-  services.xserver.libinput = {
+  services.libinput = {
     enable = true;
 
     touchpad = {
@@ -101,7 +101,10 @@
     git
   ];
 
-  programs.vim.defaultEditor = true;
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   nix = {
     settings.sandbox = true;

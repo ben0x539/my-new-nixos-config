@@ -32,8 +32,9 @@
     audacious
 
     evince
-    gnome.eog
-    gnome.cheese
+    eog
+    cheese
+    gnome-tweaks
 
     gcc
     gdb
@@ -72,7 +73,7 @@
 
     wmctrl # for xvim
 
-    logseq
+    #logseq
 
     scrypt
 
@@ -84,7 +85,7 @@
 
     prismlauncher
 
-    youtube-dl
+    yt-dlp
 
     ffmpeg-full # need full for x11grab
 
@@ -296,7 +297,7 @@
     enable = true;
     extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
-      matklad.rust-analyzer
+      rust-lang.rust-analyzer
       ms-python.python
       golang.go
     ];
