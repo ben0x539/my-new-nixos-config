@@ -74,6 +74,10 @@
     uid = 1000;
   };
 
+  users.users.minecraftserver = {
+    isNormalUser = true;
+  };
+
   # in case we're messing with io_uring again
   security.pam.loginLimits = [
     {
