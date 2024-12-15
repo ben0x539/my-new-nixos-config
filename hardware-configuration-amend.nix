@@ -16,7 +16,7 @@
       blkDev = "/dev/disk/by-uuid/ea283f6d-cef5-4c47-b2c5-8f4dec4d6a3a";
       label = "crypted";
     };
-    label = "zfw";
+    #label = "zfw";
   };
 
   # the double // somehow tricks it into not waiting for this

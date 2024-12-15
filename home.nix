@@ -79,10 +79,6 @@
 
     texlive.combined.scheme-full
 
-    (retroarch.override {
-      cores =  [ libretro.snes9x ];
-    })
-
     prismlauncher
 
     yt-dlp
@@ -197,15 +193,18 @@
       vim-nix
       haskell-vim
 
-      #coc-nvim
-      #coc-rust-analyzer
+      vim-lsp
+
+      # coc-nvim
+      # coc-rust-analyzer
+      # coc-java
     ];
     extraConfig = builtins.readFile ./home/vimrc;
   };
 
   programs.urxvt = {
     enable = true;
-    package = pkgs.rxvt_unicode-with-plugins;
+    package = pkgs.rxvt-unicode;
     keybindings = {
       "Shift-Control-C" = "eval:selection_to_clipboard";
       "Shift-Control-V" = "eval:paste_clipboard";
