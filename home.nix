@@ -144,6 +144,14 @@
     userEmail = "git@1d6.org";
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user.name = "Benjamin Herr";
+      user.email = "git@1d6.org";
+    };
+  };
+
   programs.git = {
     enable = true;
     userName = "Benjamin Herr";
