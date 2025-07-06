@@ -15,7 +15,6 @@
 
     obconf
     xcompmgr
-    xtrlock-pam
     xsel
     feh
 
@@ -300,6 +299,14 @@
       ms-python.python
       golang.go
     ];
+  };
+
+  services.xscreensaver = {
+    enable = true;
+    settings = {
+      fadeTicks = 0;
+      mode = "blank";
+    };
   };
 
   # unported xresources
